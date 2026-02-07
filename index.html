@@ -28,7 +28,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <i class="fa-solid fa-tooth text-accent"></i>
+                <img src="logo-clinica.jpeg" alt="Clinica Dental Alcivar" class="logo-img">
                 <span>Clinica Dental <span class="text-primary">Alcivar</span></span>
             </a>
             <div class="nav-menu">
@@ -49,9 +49,11 @@
     <div class="mobile-nav">
         <a href="#inicio" class="mobile-link">Inicio</a>
         <a href="#servicios" class="mobile-link">Servicios</a>
+        <a href="#promociones" class="mobile-link">Promociones</a>
         <a href="#beneficios" class="mobile-link">Beneficios</a>
         <a href="#nosotros" class="mobile-link">Nosotros</a>
         <a href="#contacto" class="mobile-link">Contacto</a>
+        <a href="#agenda" class="mobile-link mobile-cta">Agendar Cita</a>
     </div>
 
     <!-- Hero Section -->
@@ -61,6 +63,20 @@
             <h1 class="fade-in-up">Cuidamos tu sonrisa con <span class="text-highlight">atención profesional</span></h1>
             <p class="fade-in-up delay-1">Tu salud dental es nuestra prioridad. Tecnología moderna y trato amable en
                 Guayaquil.</p>
+            <div class="hero-info fade-in-up delay-1">
+                <div class="hero-info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Jardines del Salado, Guayaquil</span>
+                </div>
+                <div class="hero-info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Lun–Vie 9:00–18:00 · Sáb 9:00–13:00</span>
+                </div>
+                <div class="hero-info-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Respondemos en menos de 10 min</span>
+                </div>
+            </div>
             <div class="hero-buttons fade-in-up delay-2">
                 <a href="https://wa.me/593988797615?text=Hola,%20deseo%20agendar%20una%20cita"
                     class="btn-primary icon-btn">
@@ -70,6 +86,75 @@
             </div>
         </div>
     </header>
+
+    <!-- Quick Appointment -->
+    <section id="agenda" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Agenda rápida</h2>
+                <div class="section-line"></div>
+                <p>Déjanos tus datos y te confirmamos por WhatsApp</p>
+            </div>
+            <div class="quick-appointment">
+                <div class="quick-steps">
+                    <div class="step-card">
+                        <span class="step-number">1</span>
+                        <h4>Escribe tu solicitud</h4>
+                        <p>Cuéntanos el motivo y el horario que prefieres.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">2</span>
+                        <h4>Confirmamos tu cita</h4>
+                        <p>Te respondemos rápido con la mejor hora disponible.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">3</span>
+                        <h4>Visítanos</h4>
+                        <p>Atención profesional en un ambiente cómodo.</p>
+                    </div>
+                </div>
+                <form class="appointment-form" id="appointmentForm">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Ej. María Pérez" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Ej. 098 879 7615" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="service">Motivo de la consulta</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option>Limpieza dental</option>
+                                <option>Blanqueamiento</option>
+                                <option>Ortodoncia</option>
+                                <option>Implantes</option>
+                                <option>Endodoncia</option>
+                                <option>Estética dental</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="schedule">Horario preferido</label>
+                            <input type="text" id="schedule" name="schedule" placeholder="Ej. Martes 10:00am" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Detalles adicionales</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Síntomas, urgencia, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary form-submit">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+                    </button>
+                    <p class="form-note">Al enviar, abriremos WhatsApp con tu solicitud lista para confirmar.</p>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="servicios" class="section bg-light">
@@ -82,52 +167,136 @@
 
             <div class="services-grid">
                 <!-- Service 1 -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <div class="service-card" data-service="Limpieza Dental">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+                            <h3>Limpieza Dental</h3>
+                            <p>Higiene profunda para mantener tus dientes y encías saludables.</p>
+                            <span class="service-hint">Toca para ver detalles</span>
+                        </div>
+                        <div class="service-back">
+                            <h3>Limpieza Dental</h3>
+                            <ul>
+                                <li>Eliminación de placa y sarro</li>
+                                <li>Revisión de encías</li>
+                                <li>Recomendaciones de higiene</li>
+                            </ul>
+                            <a href="#" class="btn-primary service-cta" data-service="Limpieza Dental">Agendar por WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Limpieza Dental</h3>
-                    <p>Higiene profunda para mantener tus dientes y encías saludables, eliminando placa y sarro.</p>
                 </div>
                 <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <i class="fa-regular fa-gem"></i>
+                <div class="service-card" data-service="Blanqueamiento">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-gem"></i>
+                            </div>
+                            <h3>Blanqueamiento</h3>
+                            <p>Recupera el brillo natural de tu sonrisa con un tratamiento seguro.</p>
+                            <span class="service-hint">Toca para ver detalles</span>
+                        </div>
+                        <div class="service-back">
+                            <h3>Blanqueamiento</h3>
+                            <ul>
+                                <li>Evaluación previa</li>
+                                <li>Tratamiento controlado</li>
+                                <li>Resultados visibles</li>
+                            </ul>
+                            <a href="#" class="btn-primary service-cta" data-service="Blanqueamiento">Agendar por WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Blanqueamiento</h3>
-                    <p>Recupera el brillo natural de tu sonrisa con nuestros tratamientos de blanqueamiento seguros.</p>
                 </div>
                 <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-teeth"></i>
+                <div class="service-card" data-service="Ortodoncia">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-teeth"></i>
+                            </div>
+                            <h3>Ortodoncia</h3>
+                            <p>Corrección de la posición dental para una sonrisa alineada.</p>
+                            <span class="service-hint">Toca para ver detalles</span>
+                        </div>
+                        <div class="service-back">
+                            <h3>Ortodoncia</h3>
+                            <ul>
+                                <li>Evaluación inicial</li>
+                                <li>Plan de tratamiento</li>
+                                <li>Controles periódicos</li>
+                            </ul>
+                            <a href="#" class="btn-primary service-cta" data-service="Ortodoncia">Agendar por WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Ortodoncia</h3>
-                    <p>Corrección de la posición dental para una mordida perfecta y una sonrisa alineada.</p>
                 </div>
                 <!-- Service 4 -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                <div class="service-card" data-service="Implantes">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3>Implantes</h3>
+                            <p>Reemplazo de piezas perdidas con aspecto natural y seguro.</p>
+                            <span class="service-hint">Toca para ver detalles</span>
+                        </div>
+                        <div class="service-back">
+                            <h3>Implantes</h3>
+                            <ul>
+                                <li>Evaluación y plan</li>
+                                <li>Materiales de calidad</li>
+                                <li>Seguimiento postoperatorio</li>
+                            </ul>
+                            <a href="#" class="btn-primary service-cta" data-service="Implantes">Agendar por WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Implantes</h3>
-                    <p>Reemplazo de piezas dentales perdidas con implantes de alta calidad y aspecto natural.</p>
                 </div>
                 <!-- Service 5 -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-heart-pulse"></i>
+                <div class="service-card" data-service="Endodoncia">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h3>Endodoncia</h3>
+                            <p>Tratamiento de conductos para aliviar dolor y salvar el diente.</p>
+                            <span class="service-hint">Toca para ver detalles</span>
+                        </div>
+                        <div class="service-back">
+                            <h3>Endodoncia</h3>
+                            <ul>
+                                <li>Diagnóstico preciso</li>
+                                <li>Tratamiento indoloro</li>
+                                <li>Restauración final</li>
+                            </ul>
+                            <a href="#" class="btn-primary service-cta" data-service="Endodoncia">Agendar por WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Endodoncia</h3>
-                    <p>Tratamiento de conductos para salvar dientes dañados y aliviar el dolor.</p>
                 </div>
                 <!-- Service 6 -->
-                <div class="service-card">
-                    <div class="icon-box">
-                        <i class="fa-regular fa-face-smile"></i>
+                <div class="service-card" data-service="Estética Dental">
+                    <div class="service-inner">
+                        <div class="service-front">
+                            <div class="icon-box">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                            <h3>Estética Dental</h3>
+                            <p>Diseño de sonrisa y restauraciones para que sonrías con confianza.</p>
+                            <span class="service-hint">Toca para ver detalles</span>
+                        </div>
+                        <div class="service-back">
+                            <h3>Estética Dental</h3>
+                            <ul>
+                                <li>Carillas y diseño de sonrisa</li>
+                                <li>Restauraciones estéticas</li>
+                                <li>Plan personalizado</li>
+                            </ul>
+                            <a href="#" class="btn-primary service-cta" data-service="Estética Dental">Agendar por WhatsApp</a>
+                        </div>
                     </div>
-                    <h3>Estética Dental</h3>
-                    <p>Diseño de sonrisa, carillas y restauraciones para que sonrías con confianza.</p>
                 </div>
             </div>
         </div>
@@ -259,31 +428,36 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="nosotros" class="section bg-blue text-white">
-        <div class="container text-center">
-            <h2 class="section-title text-white">Sobre Clinica Dental Alcivar</h2>
-            <div class="section-line white"></div>
-            <div class="about-content">
-                <p class="lead">Más de 10 años construyendo sonrisas saludables en Guayaquil.</p>
-                <p class="max-w-800">
-                    Somos un equipo comprometido con la salud bucal de nuestros pacientes.
-                    Creemos que una visita al dentista debe ser una experiencia positiva y tranquila.
-                    Nuestra filosofía se basa en la honestidad, la higiene rigurosa y la excelencia en cada tratamiento.
-                </p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">+10</span>
-                        <span class="stat-label">Años de Experiencia</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">+2k</span>
-                        <span class="stat-label">Pacientes Felices</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Compromiso</span>
-                    </div>
+    <!-- Doctor Section -->
+    <section id="doctora" class="section bg-light">
+        <div class="container">
+            <div class="doctor-container">
+                <div class="doctor-image">
+                    <img src="doctora.jpg" alt="Dra. Eyda Alcívar" class="img-responsive rounded-shadow">
+                </div>
+                <div class="doctor-content">
+                    <h2 class="section-title">Dra. Eyda Alcívar</h2>
+                    <div class="section-line left"></div>
+                    <p class="lead">Dirección clínica y atención integral de la salud bucodental.</p>
+                    <p>
+                        Somos un Centro de Odontología que, bajo la dirección de la Dra. Eyda Alcívar, busca la atención
+                        integral de la salud bucodental de nuestros pacientes, brindándoles confianza y familiaridad, lo
+                        que hace de nuestros tratamientos una experiencia más cómoda.
+                    </p>
+                    <p>
+                        Fundamentamos nuestro servicio en la seguridad, la ética y el profesionalismo de quienes aquí
+                        trabajamos. Lo hacemos con disciplina y pasión, siguiendo los estándares exigidos por la
+                        legislación de nuestro país.
+                    </p>
+                    <ul class="doctor-highlights">
+                        <li><i class="fa-solid fa-check"></i> Atención con calidez y confianza</li>
+                        <li><i class="fa-solid fa-check"></i> Ética, seguridad y profesionalismo</li>
+                        <li><i class="fa-solid fa-check"></i> Protocolos y estándares vigentes</li>
+                    </ul>
+                    <a href="https://wa.me/593988797615?text=Hola,%20quiero%20agendar%20una%20cita%20con%20la%20Dra.%20Eyda%20Alc%C3%ADvar"
+                        class="btn-primary icon-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Agendar con la doctora
+                    </a>
                 </div>
             </div>
         </div>
@@ -329,25 +503,91 @@
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="section bg-light">
+    <!-- Gallery Carousel -->
+    <section class="section bg-light" id="galeria">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Nuestras Instalaciones</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"
-                        alt="Consultorio">
+            <div class="carousel" data-carousel>
+                <button class="carousel-btn prev" aria-label="Anterior" data-carousel-prev>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="carousel-track" data-carousel-track>
+                    <div class="carousel-slide">
+                        <img src="eyda1.jpg" alt="Momentos en la clínica">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2070&auto=format&fit=crop"
+                            alt="Consultorio">
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="eyda2.jpg" alt="Atención cercana y humana">
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://odontic.com/wp-content/uploads/2020/10/nuevas-instalaciones-clinica-dental-odontic-dra-maria-j-perez-19.jpg"
-                        alt="Consultorio">
+                <button class="carousel-btn next" aria-label="Siguiente" data-carousel-next>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="carousel-dots" data-carousel-dots></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="section bg-blue text-white">
+        <div class="container text-center">
+            <h2 class="section-title text-white">Sobre Clinica Dental Alcivar</h2>
+            <div class="section-line white"></div>
+            <div class="about-content">
+                <p class="lead">Más de 10 años construyendo sonrisas saludables en Guayaquil.</p>
+                <p class="max-w-800">
+                    Somos un equipo comprometido con la salud bucal de nuestros pacientes.
+                    Creemos que una visita al dentista debe ser una experiencia positiva y tranquila.
+                    Nuestra filosofía se basa en la honestidad, la higiene rigurosa y la excelencia en cada tratamiento.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">+10</span>
+                        <span class="stat-label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+2k</span>
+                        <span class="stat-label">Pacientes Felices</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Compromiso</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2070&auto=format&fit=crop"
-                        alt="Consultorio">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-light" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas frecuentes</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>¿La primera consulta tiene costo?</h4>
+                    <p>Escríbenos por WhatsApp y te indicamos la valoración según el tratamiento.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Atienden emergencias?</h4>
+                    <p>Sí, contáctanos y priorizamos tu caso según disponibilidad.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Qué métodos de pago aceptan?</h4>
+                    <p>Efectivo, transferencias y tarjetas. Pregunta por facilidades de pago.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Atienden niños?</h4>
+                    <p>Sí, contamos con atención amable para niños y toda la familia.</p>
                 </div>
             </div>
         </div>
@@ -399,9 +639,22 @@
                 <div class="col-map">
                     <!-- Google Map Embed (Guayaquil center placeholder) -->
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127641.05057077395!2d-79.96676100720456!3d-2.152781440051759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13c5837080d3%3A0xbed753df4580c2cf!2sGuayaquil!5e0!3m2!1ses!2sec!4v1700000000000!5m2!1ses!2sec"
+                        src="https://www.google.com/maps?q=Jardines%20del%20Salado,%20Manzana%20193,%20Villa%209,%20Guayaquil,%20Ecuador&output=embed"
                         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-actions">
+                        <a class="btn-secondary map-btn" target="_blank"
+                            href="https://www.google.com/maps/search/?api=1&query=Jardines%20del%20Salado,%20Manzana%20193,%20Villa%209,%20Guayaquil,%20Ecuador">
+                            <i class="fa-solid fa-map-location-dot"></i> Google Maps
+                        </a>
+                        <a class="btn-secondary map-btn" target="_blank"
+                            href="https://waze.com/ul?q=Jardines%20del%20Salado,%20Manzana%20193,%20Villa%209,%20Guayaquil,%20Ecuador&navigate=yes">
+                            <i class="fa-brands fa-waze"></i> Waze
+                        </a>
+                        <button class="btn-secondary map-btn" id="shareLocationBtn">
+                            <i class="fa-solid fa-share-nodes"></i> Compartir ubicación
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
